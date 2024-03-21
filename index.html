@@ -16,7 +16,7 @@
         color: #fff;
         padding: 8px;
         text-align: center;
-        transition: height 0.3s ease; /* Added smooth transition for header */
+        transition: height 0.3s ease;
     }
     nav {
         display: flex;
@@ -38,7 +38,7 @@
         max-width: 800px;
         margin: 20px auto;
         padding: 0 20px;
-        transition: opacity 0.3s ease; /* Added smooth transition for content */
+        transition: opacity 0.3s ease;
     }
     h1 {
         text-align: center;
@@ -58,13 +58,13 @@
         width: 100%;
     }
     .gallery {
-        display: none; /* Initially hide the gallery */
+        display: none;
         margin-top: 20px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        opacity: 0; /* Initially hide the gallery with opacity */
-        transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
     .gallery img {
         width: 200px;
@@ -100,9 +100,9 @@
     <p>&copy; 2024 Nightquaker</p>
 </footer>
 
-<div class="gallery" id="gallery"> <!-- Updated ID -->
+<div class="gallery" id="gallery">
 <!--    <h2>Gallery of my projects</h2>
-    <p>Check out these amazing images.</p>  -->
+    <p>Some of the art projects I've done</p>  -->
     <div class="gallery-images">
         <img src="https://via.placeholder.com/200" alt="Image 1">
         <img src="https://via.placeholder.com/200" alt="Image 2">
@@ -118,70 +118,69 @@
 
 <script>
     const container = document.getElementById('content');
-    const galleryBtn = document.getElementById('galleryBtn'); // Updated gallery button ID
-    const gallery = document.getElementById('gallery'); // Updated gallery ID
+    const galleryBtn = document.getElementById('galleryBtn');
+    const gallery = document.getElementById('gallery');
 
     galleryBtn.addEventListener('click', function() {
         container.style.opacity = '0';
-        gallery.style.opacity = '0'; // Initially set opacity to 0
-        gallery.style.display = 'flex'; // Display the gallery
+        gallery.style.opacity = '0';
+        gallery.style.display = 'flex';
         setTimeout(() => {
             container.style.opacity = '1';
-            gallery.style.opacity = '1'; // Fade in the gallery
+            gallery.style.opacity = '1';
         }, 300);
 
-        // Clear the content of the container when showing the gallery
         container.innerHTML = '';
     });
 
 
     document.getElementById('home').addEventListener('click', function() {
-        container.style.opacity = '0'; // Fade out the content
-        gallery.style.opacity = '0'; // Fade out the gallery
+        container.style.opacity = '0';
+        gallery.style.opacity = '0';
         setTimeout(() => {
             container.innerHTML = `
                 <h2>Welcome</h2>
                 <p>This is my website, here you can find info on my projects and contacts</p>`;
-            container.style.opacity = '1'; // Fade in the new content
-            gallery.style.display = 'none'; // Hide the gallery
-        }, 300); // Wait for the fade out transition to complete
+            container.style.opacity = '1';
+            gallery.style.display = 'none';
+        }, 300);
     });
 
     document.getElementById('projects').addEventListener('click', function() {
-        container.style.opacity = '0'; // Fade out the content
-        gallery.style.opacity = '0'; // Fade out the gallery
+        container.style.opacity = '0';
+        gallery.style.opacity = '0';
         setTimeout(() => {
             container.innerHTML = `
                 <h2>My Projects</h2>
                 <p>Here you can find information about my latest projects</p>`;
-            container.style.opacity = '1'; // Fade in the new content
-            gallery.style.display = 'none'; // Hide the gallery
-        }, 300); // Wait for the fade out transition to complete
+            container.style.opacity = '1';
+            gallery.style.display = 'none';
+        }, 300);
     });
 
     document.getElementById('about').addEventListener('click', function() {
-        container.style.opacity = '0'; // Fade out the content
-        gallery.style.opacity = '0'; // Fade out the gallery
+        container.style.opacity = '0';
+        gallery.style.opacity = '0';
         setTimeout(() => {
             container.innerHTML = `
                 <h2>About me</h2>
                 <p>Name's Nightquaker. I make music, videos, other art stuff. I also code and do some other tech-related projects.</p>`;
-            container.style.opacity = '1'; // Fade in the new content
-            gallery.style.display = 'none'; // Hide the gallery
-        }, 300); // Wait for the fade out transition to complete
+            container.style.opacity = '1';
+            gallery.style.display = 'none';
+        }, 300);
     });
 
     document.getElementById('contact').addEventListener('click', function() {
-        container.style.opacity = '0'; // Fade out the content
-        gallery.style.opacity = '0'; // Fade out the gallery
+        container.style.opacity = '0';
+        gallery.style.opacity = '0';
         setTimeout(() => {
             container.innerHTML = `
                 <h2>Contacts</h2>
                 <p>Email: info@example.com</p>
                 <p>Phone: +1234567890</p>`;
-            container.style.opacity = '1'; // Fade in the new content
-            gallery.style.display = 'none'; // Hide the gallery
-        }, 300); // Wait for the fade out transition to complete
+            container.style.opacity = '1';
+            gallery.style.display = 'none';
+        }, 300);
     });
 </script>
 </body>
