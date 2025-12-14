@@ -1,187 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nightquaker's page</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nightquaker</title>
+  <meta name="description" content="Nightquaker – personal portfolio website" />
+
+  <style>
+    :root {
+      --bg: #0e1116;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #9da7b3;
+      --accent: #4da3ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #ceefff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -20%, #1b2330 0%, var(--bg) 60%);
+      color: var(--text);
+      line-height: 1.6;
     }
-    header {
-        background-color: #12b4dd;
-        color: #fff;
-        padding: 8px;
-        text-align: center;
-        transition: height 0.3s ease;
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
     }
-    nav {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
+
+    a:hover {
+      text-decoration: underline;
     }
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 8px 16px;
-        margin: 0 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    nav a:hover {
-        background-color: #666;
-    }
+
     .container {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 0 20px;
-        transition: opacity 0.3s ease;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
     }
-    h1 {
-        text-align: center;
-        color: #333;
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
     }
-    p {
-        line-height: 1.6;
-        color: #555;
+
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
     }
+
+    header p {
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+    }
+
+    .card {
+      background: linear-gradient(180deg, #1a2030, var(--card));
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .links a {
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(77, 163, 255, 0.12);
+      border: 1px solid rgba(77, 163, 255, 0.35);
+      font-size: 0.95rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .links a:hover {
+      background: rgba(77, 163, 255, 0.22);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
     footer {
-        background-color: #12b4dd;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
-    .gallery {
-        display: none;
-        margin-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+
+    @media (max-width: 600px) {
+      header {
+        padding: 3rem 1rem 2rem;
+      }
+
+      .card {
+        padding: 1.4rem;
+      }
     }
-    .gallery img {
-        width: 200px;
-        height: auto;
-        margin: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-        transform: scale(1.1);
-    }
-</style>
+  </style>
 </head>
 <body>
-<header>
-    <h1>Hi! I'm Nightquaker. I make stuff :)</h1>
-    <nav>
-        <a href="#" id="home">Home</a>
-        <a href="#" id="projects">My Projects</a>
-        <a href="#" id="galleryBtn">Gallery</a>
-        <a href="#" id="about">About</a>
-        <a href="#" id="contact">Contact</a>
-    </nav>
-</header>
+  <header>
+    <h1>Hello, I'm Nightquaker.</h1>
+    <p>Welcome to my website!</p>
+  </header>
 
-<div class="container" id="content">
-    <h2>Welcome</h2>
-    <p>This is my website, here you can find info on my projects and contacts</p>
-</div>
+  <main class="container">
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        I'm a developer who enjoys building practical tools, experimenting with software,
+        and learning how things work under the hood. This site is a simple home for my
+        projects and online presence.
+      </p>
+    </section>
 
-<footer>
-    <p>&copy; 2024 Nightquaker</p>
-</footer>
+    <section class="card">
+      <h2>Projects</h2>
+      <p>
+        You can find most of my work on GitHub. I focus on clean, functional code and
+        straightforward solutions.
+      </p>
+      <div class="links">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a href="#">Project 1</a>
+        <a href="#">Project 2</a>
+      </div>
+    </section>
 
-<div class="gallery" id="gallery">
-<!--    <h2>Gallery of my projects</h2>
-    <p>Some of the art projects I've done</p>  -->
-    <div class="gallery-images">
-        <img src="https://via.placeholder.com/200" alt="Image 1">
-        <img src="https://via.placeholder.com/200" alt="Image 2">
-        <img src="https://via.placeholder.com/200" alt="Image 3">
-        <img src="https://via.placeholder.com/200" alt="Image 4">
-        <img src="https://via.placeholder.com/200" alt="Image 5">
-        <img src="https://via.placeholder.com/200" alt="Image 6">
-        <img src="https://via.placeholder.com/200" alt="Image 7">
-        <img src="https://via.placeholder.com/200" alt="Image 8">
-        <img src="https://via.placeholder.com/200" alt="Image 9">
-    </div>
-</div>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        The easiest way to reach me is through GitHub.
+      </p>
+    </section>
+  </main>
 
-<script>
-    const container = document.getElementById('content');
-    const galleryBtn = document.getElementById('galleryBtn');
-    const gallery = document.getElementById('gallery');
+  <footer>
+    © <span id="year"></span> Nightquaker
+  </footer>
 
-    galleryBtn.addEventListener('click', function() {
-        container.style.opacity = '0';
-        gallery.style.opacity = '0';
-        gallery.style.display = 'flex';
-        setTimeout(() => {
-            container.style.opacity = '1';
-            gallery.style.opacity = '1';
-        }, 300);
-
-        container.innerHTML = '';
-    });
-
-
-    document.getElementById('home').addEventListener('click', function() {
-        container.style.opacity = '0';
-        gallery.style.opacity = '0';
-        setTimeout(() => {
-            container.innerHTML = `
-                <h2>Welcome</h2>
-                <p>This is my website, here you can find info on my projects and contacts</p>`;
-            container.style.opacity = '1';
-            gallery.style.display = 'none';
-        }, 300);
-    });
-
-    document.getElementById('projects').addEventListener('click', function() {
-        container.style.opacity = '0';
-        gallery.style.opacity = '0';
-        setTimeout(() => {
-            container.innerHTML = `
-                <h2>My Projects</h2>
-                <p>Here you can find information about my latest projects</p>`;
-            container.style.opacity = '1';
-            gallery.style.display = 'none';
-        }, 300);
-    });
-
-    document.getElementById('about').addEventListener('click', function() {
-        container.style.opacity = '0';
-        gallery.style.opacity = '0';
-        setTimeout(() => {
-            container.innerHTML = `
-                <h2>About me</h2>
-                <p>Name's Nightquaker. I make music, videos, other art stuff. I also code and do some other tech-related projects.</p>`;
-            container.style.opacity = '1';
-            gallery.style.display = 'none';
-        }, 300);
-    });
-
-    document.getElementById('contact').addEventListener('click', function() {
-        container.style.opacity = '0';
-        gallery.style.opacity = '0';
-        setTimeout(() => {
-            container.innerHTML = `
-                <h2>Contacts</h2>
-                <p>Email: info@example.com</p>
-                <p>Phone: +1234567890</p>`;
-            container.style.opacity = '1';
-            gallery.style.display = 'none';
-        }, 300);
-    });
-</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
